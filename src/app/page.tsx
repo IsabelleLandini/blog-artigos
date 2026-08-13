@@ -16,7 +16,7 @@ async function Home () {
 
   return (
     <main>
-      <h1>Blog</h1>
+      <h1>DevLog</h1>
       {artigos.map((artigo) =>
         <article key = {artigo._id}>
             <h2>{artigo.titulo}</h2>
