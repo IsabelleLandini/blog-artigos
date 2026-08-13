@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type Artigo = {
   _id: string,
   titulo: string,
@@ -19,7 +21,10 @@ async function Home () {
       <h1>DevLog</h1>
       {artigos.map((artigo) =>
         <article key = {artigo._id}>
-            <h2>{artigo.titulo}</h2>
+            <Link href={`/artigos/${artigo.slug}`}>
+              <h2>{artigo.titulo}</h2>
+            </Link>
+           
             <p>{artigo.autor}</p>
             <p>{artigo.data}</p>
             <p>{artigo.conteudo}</p>
