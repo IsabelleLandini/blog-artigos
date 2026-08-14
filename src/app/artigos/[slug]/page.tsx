@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { Artigo } from "@/types/artigo";
+import buscarArtigos from "@/lib/artigos";
 
 type Params = {
     slug: string
@@ -7,10 +7,8 @@ type Params = {
 
 async function Home({params}: { params: Promise<Params>}) {
     const { slug } = await params
-
-    const response = await fetch('https://crudcrud.com/api/8e565d6e33744604899a772ffbaa6c86/artigos')
     
-    const artigos : Artigo[]  = await response.json()
+    const artigos = await buscarArtigos()
 
     const artigo = artigos.find((artigo) => artigo.slug === slug)
     console.log(artigo)

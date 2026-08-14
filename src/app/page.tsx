@@ -1,10 +1,9 @@
 import Link from "next/link";
-import { Artigo } from "../types/artigo";
+import buscarArtigos from "@/lib/artigos";
 
 
-async function Home () {
-  const response = await fetch('https://crudcrud.com/api/8e565d6e33744604899a772ffbaa6c86/artigos')  
-  const artigos: Artigo[] = await response.json()
+async function Home () { 
+  const artigos = await buscarArtigos()
   
   console.log( artigos )
 
