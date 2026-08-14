@@ -1,14 +1,5 @@
 import { notFound } from "next/navigation";
-
-
-type Artigo = {
-    _id: string
-    titulo: string
-    autor: string
-    data: string
-    conteudo: string
-    slug: string
-}
+import { Artigo } from "@/types/artigo";
 
 type Params = {
     slug: string
@@ -17,7 +8,7 @@ type Params = {
 async function Home({params}: { params: Promise<Params>}) {
     const { slug } = await params
 
-    const response = await fetch('https://crudcrud.com/api/608c972c7415451fa842b3d80d68add6/artigos')
+    const response = await fetch('https://crudcrud.com/api/8e565d6e33744604899a772ffbaa6c86/artigos')
     
     const artigos : Artigo[]  = await response.json()
 
