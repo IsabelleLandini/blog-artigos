@@ -5,4 +5,5 @@ export type Artigo = {
   data: string,
   conteudo: string,
   slug: string
+  imagem: string | null
 }

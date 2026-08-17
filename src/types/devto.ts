@@ -7,5 +7,6 @@ export type DevToArticle = {
     readable_publish_date: string,
     description: string, 
     body_markdown: string,
-    slug: string
+    slug: string,
+    cover_image: string | null,
 }

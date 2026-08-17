@@ -1,4 +1,4 @@
-
+// Página exibida quando o artigo solicitado não é encontrado.
 function NotFound() {
     return (
         <main>
@@ -8,4 +8,4 @@ function NotFound() {
     )
 }
 
-export default NotFound
+export default NotFound;
