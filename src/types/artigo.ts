@@ -1,5 +1,5 @@
 export type Artigo = {
-  _id: string,
+  id: number,
   titulo: string,
   autor: string,
   data: string,

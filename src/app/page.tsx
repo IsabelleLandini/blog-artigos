@@ -1,7 +1,6 @@
 import Link from "next/link";
 import buscarArtigos from "@/lib/artigos";
 
-
 async function Home () { 
   const artigos = await buscarArtigos()
   
@@ -11,7 +10,7 @@ async function Home () {
     <main>
       <h1>DevLog</h1>
       {artigos.map((artigo) =>
-        <article key = {artigo._id}>
+        <article key = {artigo.id}>
             <Link href={`/artigos/${artigo.slug}`}>
               <h2>{artigo.titulo}</h2>
             </Link>
